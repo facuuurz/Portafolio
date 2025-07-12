@@ -5,14 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Poppins -->
+    <!-- Funete Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Scripts de animaciones de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        float: "float 2s ease-in-out infinite"
+                    },
+                    keyframes: {
+                        float: {
+                            "0%, 100%": { transform: "translateY(0)" },
+                            "50%": { transform: "translateY(-10%)" }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
     <title>Portafolio</title>
 </head>
 <body class='font-["Poppins",_sans-serif] bg-fixed text-[#F2E1C2] bg-[url(IMG/Fondo/fondo.jpg)] bg-no-repeat  bg-center bg-cover ' >
@@ -23,24 +38,31 @@
             </div>
 
             <nav class="flex items-center justify-between w-[25rem] text-[#F2E1C2] ">
-                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full">Inicio</a>
-                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full">Sobre mi</a>
-                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full">Proyectos</a>
-                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full">Skills</a>
-                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full">Contacto</a>
+                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full transition-all duration-700">Inicio</a>
+                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full transition-all duration-700">Sobre mi</a>
+                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full transition-all duration-700">Proyectos</a>
+                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full transition-all duration-700">Skills</a>
+                <a href="#" class="hover:bg-[#F2E1C2] hover:text-[#566873] py-2 px-1 rounded-full transition-all duration-700">Contacto</a>
             </nav>
         </section>
     </header>
     <main class="flex justify-center items-center">
-        <section class="flex flex-col items-center justify-start w-full max-w-[1200px] min-h-[calc(100vh-128px)] px-4 pt-24">
-            <div class="flex flex-col bg-[#566873] items-center justify-center">
-                <h1 class="p-3 text-5xl font-semibold">Hola soy Facundo Ramirez</h1>
-                <p class="pt-6  bg-slate-500 text-2xl">Analista en Sistemas y Programador FullStack.</p>
+        <section class="flex flex-col items-center justify-between w-full max-w-[1200px] min-h-[calc(100vh-8rem)] px-4 py-4">
+            <div>
+                <div class="flex flex-col bg-[#566873] items-center justify-center">
+                    <h1 class="p-3 text-5xl font-semibold">Hola soy Facundo Ramirez</h1>
+                    <p class="pt-6  bg-slate-500 text-2xl">Analista en Sistemas y Programador FullStack.</p>
+                </div>
+                <div class="flex bg-teal-900 items-center justify-center gap-28 mt-20 text-2xl">
+                    <a href="#" class="p-3 bg-black rounded-full border-transparent">Mi CV</a>
+                    <a href="#" class="p-3 bg-black rounded-full border-transparent">sobre mi</a>
+                    <a href="#" class="p-3 bg-black rounded-full border-transparent">mas</a>
+                </div>
             </div>
-            <div class="flex bg-teal-900 items-center justify-center gap-28 mt-20 text-2xl">
-                <a href="#" class="p-3 bg-black rounded-full border-transparent">Mi CV</a>
-                <a href="#" class="p-3 bg-black rounded-full border-transparent">sobre mi</a>
-                <a href="#" class="p-3 bg-black rounded-full border-transparent">mas</a>
+            
+            <div class="relative w-14 h-14 bg-yellow-200">
+                <img src="IMG/Hero/iconoDesplazamiento1.png" alt="icono 1" class="absolute top-0 left-0 w-full h-full object-contain shadow-lg transition-opacity duration-300 opacity-100 hover:opacity-0 drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] animate-float">
+                <img src="IMG/Hero/iconoDesplazamiento2.png" alt="icono 2" class="absolute top-0 left-0 w-full h-full object-contain shadow-lg transition-opacity duration-300 opacity-0 hover:opacity-100 drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] animate-float hover:cursor-pointer">
             </div>
         </section>
     </main>
