@@ -27,6 +27,31 @@
             }
         }
     </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        float: "float 2s ease-in-out infinite",'fade-in-down': 'fadeInDown 0.5s ease-out forwards', 'fade-out-up': 'fadeOutUp 0.5s ease-in forwards'
+                    }, 
+                    keyframes: { 
+                            float: {
+                                "0%, 100%": { transform: "translateY(0)" },
+                                "50%": { transform: "translateY(-10%)" }
+                            },
+                            fadeInDown: {
+                                '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                                '100%': { opacity: '1', transform: 'translateY(0)' }
+                            },
+                            fadeOutUp: {
+                            '0%': { opacity: '1', transform: 'translateY(0)' },
+                            '100%': { opacity: '0', transform: 'translateY(-20px)' }
+                            }
+                    }
+                }
+            }
+        }
+    </script>
 
     <title>Portafolio</title>
 </head>
@@ -38,8 +63,8 @@
                 <img src="IMG/Header/logo twitter 2.png" alt="logo de mi portafolio" class="block">
             </div>
 
-            <div class="overflow-hidden rounded-lg">
-                <nav id="nav-header" class="flex items-center justify-between text-[#F2E1C2] text-xl font-medium gap-6 transform transition-transform duration-500 translate-x-full"> 
+            <div class="rounded-lg">
+                <nav id="nav-header" class="hidden flex items-center justify-between text-[#F2E1C2] text-xl font-medium gap-6">
                     <!-- Botón de idioma -->
                     <button>
                         <img src="IMG/Header/image (3).png" alt="icono de idioma" class="w-8 h-8">
